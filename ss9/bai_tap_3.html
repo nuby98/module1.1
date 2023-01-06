@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><H3>Tổng số buổi của module</H3></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" size="25" id="nhapa">
+        </td>
+    </tr>
+    <tr>
+        <td><H3>Tổng số buổi nghỉ</H3></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" size="17" id="nhapb">
+        </td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>
+            <button onclick="nhap()">Kiểm tra phần trăm vắng</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="hien1"></td>
+    </tr>
+    <tr>
+        <td id="hien"></td>
+    </tr>
+</table>
+</body>
+<script>
+    // let a = +prompt("Nhập tổng số buổi của module");
+    // let b = +prompt("Nhập tổng số buổi nghỉ");
+    // let r = (b / a) * 100;
+    // document.write("Số phần trăm nghỉ: " + r.toFixed(2) + " %" + "<br>");
+    // if (r >= 20) {
+    //     document.write("buộc chuyển lớp");
+    // } else if (r > 10) {
+    //     document.write("Gửi mail warning");
+    // }
+    function nhap() {
+        let hien1= document.getElementById("hien1");
+        let hien = document.getElementById("hien");
+        let a = document.getElementById("nhapa").value;
+        let b = document.getElementById("nhapb").value;
+        let r = (b / a) * 100;
+        hien1.innerHTML = (`Số phần trăm nghỉ: ` + r.toFixed(2) + `%` + `<br>`);
+        if (r >= 20) {
+            hien.innerHTML = ("buộc chuyển lớp");
+        } else if (r > 10) {
+            hien.innerHTML = ("Gửi mail warning");
+        }
+    }
+</script>
+</html>

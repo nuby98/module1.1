@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let i = 0;
+    do {
+        let n = +prompt("Nhập số N");
+        if (0 < n && n < 100) {
+            document.write("Bạn đã nhập đúng");
+            break;
+        } else {
+            alert("Mời bạn nhập lại");
+        }
+        i++;
+    } while (i < 100);
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><h2>nhap so tien muon doi</h2></td>
+
+    </tr>
+    <tr>
+        <td><input type="text" size="30" id="tien"></td>
+
+        <td>
+            <select id="tu">
+                <option value="usd">USD</option>
+                <option value="jpy">JPY</option>
+                <option value="vnd">VND</option>
+                <option value="rmb">RMB</option>
+                <option value="gbp">GBP</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <select id="qua">
+                <option value="usd">USD</option>
+                <option value="jpy">JPY</option>
+                <option value="vnd">VND</option>
+                <option value="rmb">RMB</option>
+                <option value="gbp">GBP</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <button onclick="quydoi()">Click quy doi</button>
+        </td>
+    </tr>
+
+</table>
+</body>
+<script>
+    function quydoi() {
+        let tu = document.getElementById("tu").value;
+        let qua = document.getElementById("qua").value;
+        let money = document.getElementById("tien").value;
+
+</script>
+</html>

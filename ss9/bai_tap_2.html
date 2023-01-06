@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập Lương tháng</td>
+    </tr>
+    <tr>
+        <td><input type="number" size="25" id="luong"></td>
+    </tr>
+    <tr>
+        <td> Số giờ làm việc</td>
+    </tr>
+    <tr>
+        <td><input type="number" size="25" id="gio"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="thuong()">Cilck</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="hien"></td>
+    </tr>
+</table>
+</body>
+<script>
+    function thuong() {
+        let hien = document.getElementById("hien");
+        let money = document.getElementById("luong").value;
+        let time = document.getElementById("gio").value;
+        let nhan;
+        if (time >= 200) {
+            nhan = money * 0.2;
+        } else if (time >= 100 && time < 200) {
+            nhan = money * 0.1;
+        } else {
+            alert("bạn chưa đạt số giờ được nhận thưởng");
+        }
+        hien.innerHTML = `Tien thuong : ` + nhan;
+    }
+</script>
+</html>
