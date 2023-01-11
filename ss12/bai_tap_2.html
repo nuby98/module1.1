@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let m = +prompt(" nhập độ dài cho mảng")
+    let array = [];
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        array[i] = +prompt(" nhập phần tử" + i);
+    }
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 1; j <= array[i]; j++) {
+            if (array[i] === j * j) {
+                arr.push(array[i]);
+            }
+        }
+    }
+    document.writeln("Các số trong mảng " + array + "<br>");
+    document.writeln("Các số chính phương "+arr);
+
+</script>
+</html>

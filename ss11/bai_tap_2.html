@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arryFather = +prompt("Nhập số tuổi của cha: ");
+    let arryChild = +prompt("Nhập số tuổi của con:");
+    document.write("Tuổi cha: " + arryFather + " tuổi " + "<br>");
+    document.write("Tuổi con: " + arryChild + " tuổi " + "<br>");
+    for (let i = 0; ; i++) {
+        if (arryFather + i === 2 * (arryChild + i)) {
+            document.write("Tuổi cha gấp đôi tuổi con là: " + i + " năm");
+            break;
+        }
+    }
+
+</script>
+</html>

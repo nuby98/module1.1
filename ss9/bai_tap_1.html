@@ -34,17 +34,55 @@
         </td>
         <td></td>
         <td>
-            <button onclick="quydoi()">Click quy doi</button>
+            <button onclick="quyDoi()">Click quy doi</button>
         </td>
     </tr>
-
+    <tr>
+        <td>Sô tiền quy đổi là:</td>
+        <td id="ketqua"></td>
+    </tr>
 </table>
 </body>
 <script>
-    function quydoi() {
-        let tu = document.getElementById("tu").value;
-        let qua = document.getElementById("qua").value;
-        let money = document.getElementById("tien").value;
+    function quyQuaDollar(x, y) {
+        switch (x) {
+            case "usd":
+                return y;
+            case "jpy":
+                return 0.0075 * y;
+            case "vnd":
+                return 23000 / y;
+            case "rmb":
+                return 0.15 * y;
+            case "gbp":
+                return 1.21 * y;
+        }
+    }
 
+    function tuDollarQua(x, y) {
+        switch (x) {
+            case "usd":
+                return y;
+            case "jpy":
+                return y / 0.0075;
+            case "vnd":
+                return y * 23000;
+            case "rmb":
+                return y / 0.15;
+            case "gbp":
+                return y / 1.21;
+
+        }
+
+    }
+
+    function quyDoi() {
+        let nhap = document.getElementById("tien").value;
+        let from = document.getElementById("tu").value;
+        let to = document.getElementById("qua").value;
+        let ketQua = document.getElementById("ketqua");
+        let tong = tuDollarQua(to, quyQuaDollar(from, nhap));
+        ketQua.innerHTML = tong + "  " + to;
+    }
 </script>
 </html>

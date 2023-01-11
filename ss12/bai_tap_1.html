@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let array = [];
+    let n = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Nhập số phần tử : ");
+    }
+    if (n % 2 === 0) {
+        document.write("OK" + "<br>");
+    } else {
+        document.write("NO" + "<br>");
+    }
+    document.write(array);
+</script>
+</html>
