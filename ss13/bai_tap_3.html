@@ -9,25 +9,25 @@
 </body>
 <script>
 
-    // let n = +prompt("Nhập độ dài mảng")
-    // let array = [];
-    // for (let i = 0; i < n; i++) {
-    //     array[i] = +prompt("Nhập phần tử ")
-    //     if (array[i] === array.indexOf(i)) {
-    //         alert("Mời nhập lại")
-    //     }
-    // }
-    // console.log(array)
+    let n = +prompt("Nhap so luong phan tu");
     let i = 0;
-    let n = +prompt(" độ dài mảng");
-    do {
-        let array = [];
-        array[i] = +prompt("Nhập phần tử ");
-        if (array.indexOf(array[i] === -1)) {
-            alert("Mời nhập lại");
-
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        do {
+            arr[i] = +prompt("Nhap phan tu" + (i + 1) + "=");
         }
-        i++
-    } while (i < n)
+        while (!checkArr(arr, i));
+    }
+
+    function checkArr(arr, i) {
+        for (let j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    alert(arr);
 </script>
 </html>

@@ -12,12 +12,10 @@
     let arryChild = +prompt("Nhập số tuổi của con:");
     document.write("Tuổi cha: " + arryFather + " tuổi " + "<br>");
     document.write("Tuổi con: " + arryChild + " tuổi " + "<br>");
-    for (let i = 0; ; i++) {
+    for (let i = 0; i < arryFather; i++) {
         if (arryFather + i === 2 * (arryChild + i)) {
             document.write("Tuổi cha gấp đôi tuổi con là: " + i + " năm");
-            break;
         }
     }
-
 </script>
 </html>
