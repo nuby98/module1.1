@@ -8,10 +8,34 @@
 
 </body>
 <script>
-    let n = +prompt("Nhập độ dài mảng");
-    let array = [];
-    for (let i = 0; i < n; i++){
-        array[i]=+prompt("")
+
+    let m = +prompt("số phần tử mảng lớn");
+    let array = new Array(m);
+    for (let i = 0; i < m; i++) {
+        let n = +prompt("nhập độ dài mảng con thứ " + (i));
+        let array1 = new Array(n)
+        for (let j = 0; j < n; j++) {
+            array1[j] = +prompt("nhập giá trị cho mảng con thứ " + (i));
+        }
+        array[i] = array1;
     }
+    console.log(array);
+    let sum, sum1 = 0, sum2 = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (i === j) {
+                sum1 = sum1 + array[i][j];
+            }
+            if (i + j === array.length - 1) {
+                sum2 = sum2 + array[i][j];
+            }
+
+        }
+    }
+    sum = sum1 + sum2;
+    document.write("Tổng đường chéo thứ nhất  " + sum1 + '<br>');
+    document.write("Tổng đường chéo thứ hai " + sum2 + '<br>');
+    document.write("Tổng hai đường chéo : " + sum + '<br>');
+
 </script>
 </html>

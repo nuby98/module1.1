@@ -10,24 +10,23 @@
 <script>
 
     let n = +prompt("Nhap so luong phan tu");
-    let i = 0;
-    let arr = [];
+    let array = [];
     for (let i = 0; i < n; i++) {
         do {
-            arr[i] = +prompt("Nhap phan tu" + (i + 1) + "=");
+            array[i] = +prompt("Nhap phan tu" + (i + 1) + "=");
         }
-        while (!checkArr(arr, i));
+        while (!checkArr(array, i));
     }
 
-    function checkArr(arr, i) {
-        for (let j = 0; j < i; j++) {
-            if (arr[i] == arr[j]) {
+    function checkArr(a,b) {
+        for (let j = 0; j < b; j++) {
+            if (a[b] === a[j]) {
                 return false;
             }
         }
         return true;
     }
 
-    alert(arr);
+    alert(array);
 </script>
 </html>

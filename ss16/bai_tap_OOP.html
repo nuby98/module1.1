@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function bankACB(number, name, money) {
+        this.number = number;
+        this.name = name;
+        this.money = money;
+        this.getInfor = function () {
+            return "Số tk: " + this.number + " Tên khách hàng: " + this.name + " Số tiền: " + this.money +"VNĐ";
+        }
+    }
+   var nameGuest = prompt("Nhập Tên Khách hàng");
+    var accountNumber = +prompt("Nhập số tài khoản Khách hàng");
+    var moneyNumber = +prompt("Nhập số tiền trong tài khoản");
+    var guest = new bankACB(accountNumber,nameGuest,moneyNumber);
+    document.write(guest.getInfor());
+</script>
+</html>
